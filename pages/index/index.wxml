@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='select'>
+    <view class='select-title'>选择区域：</view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class='picker'>
+      {{array[index]}}
+    </picker>
+  </view>
+  <view class='parking'>
+    <canvas class='canvas-parking' canvas-id="firstCanvas"></canvas>
+    <image class='img-parking' src="../img/parking.jpg"></image>
+  </view> 
+
+</view>

@@ -1,0 +1,35 @@
+/**index.wxss**/
+.select {
+  height: 60rpx;
+  width: 350px;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  margin: 0 auto 40rpx;
+}
+
+.select-title {
+  display: inline-block;
+}
+.picker {
+  width: 80rpx;
+  display: inline-block;
+}
+.parking {
+  width: 350px;
+  height: 350px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.canvas-parking {
+  width: 100%;
+  height: 600rpx;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+
+.img-parking {
+  width: 100%;
+  height: 300px;
+}
