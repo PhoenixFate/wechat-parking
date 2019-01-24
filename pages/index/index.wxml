@@ -1,14 +1,38 @@
 <!--index.wxml-->
 <view class="container">
-  <view class='select'>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" class="get-user" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 用户授权 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <text class="car-code">{{carCode}}</text>
+    </block>
+    <text class='park-model'style="background-color:{{modelColor[0]}}" bindtap="parkingModel">停车模式</text>
+    <text class='find-model'style="background-color:{{modelColor[1]}}" bindtap="findingModel">寻车模式</text>
+  </view>
+  <view class='parking-name'>
+    <view class='parking-name-title'>选择停车场：</view>
+    <picker bindchange="bindPickerChangeParking" value="{{index}}" range="{{parkingArray}}" class='parking-name-picker'>
+      {{parkingArray[parkingIndex]}}
+    </picker>
+  </view>
+  <view class='select' wx:if='{{modelColor[0]=="#25ddea"}}'>
     <view class='select-title'>选择区域：</view>
     <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class='picker'>
       {{array[index]}}
+    </picker>
+    <view class="select-empty">
+      <text>{{emptyNum[index]}} </text> 个空车位
+    </view>
+  </view>
+  <view class='select' wx:if='{{modelColor[1]=="#25ddea"}}'>
+    <view class='select-title'>选择入口：</view>
+    <picker bindchange="changeEntry" value="{{index}}" range="{{arrayEntry}}" class='picker'>
+      {{arrayEntry[entryIndex]}}
     </picker>
   </view>
   <view class='parking'>
     <canvas class='canvas-parking' canvas-id="firstCanvas"></canvas>
     <image class='img-parking' src="../img/parking.jpg"></image>
-  </view> 
-
+  </view>
 </view>

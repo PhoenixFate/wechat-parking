@@ -1,17 +1,108 @@
 /**index.wxss**/
-.select {
+.userinfo {
+  height: 200rpx;
+  position: relative;
+  background: -webkit-linear-gradient(top, #13c2eb, #1cd2eb, #25ddea);
+}
+
+.get-user {
+  display: inline-block;
+  top:60rpx;
+  left: 60rpx;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 36rpx 42rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname,
+.car-code {
+  position: absolute;
+  left: 30%;
+}
+.userinfo-nickname {
+  top:40rpx;
+}
+.car-code {
+  top:110rpx;
+}
+
+.park-model,
+.find-model {
+  display: inline-block;
+  width: 180rpx;
   height: 60rpx;
-  width: 350px;
-  font-size: 28rpx;
+  text-align: center;
   line-height: 60rpx;
-  margin: 0 auto 40rpx;
+  border-radius: 8rpx;
+  background-color: #00ccfa;
+  position: absolute;
+  font-size: 30rpx;
+  right:15px;
+}
+
+.park-model {
+  top:30rpx;
+  background-color: #ccc;
+}
+
+.park-model:active {
+  border: 1rpx solid #fff;
+}
+
+.find-model {
+  top:120rpx;
+}
+
+.find-model:active {
+  border: 1rpx solid #fff;
+}
+
+.select {
+  height: 50rpx;
+  width: 660rpx;
+  font-size: 28rpx;
+  line-height: 50rpx;
+  margin: 20rpx auto 40rpx;
 }
 
 .select-title {
+  font-size: 40rpx;
   display: inline-block;
 }
+.select-empty {
+  font-size: 40rpx;
+  float: right;
+}
+.select-empty text {
+  color:greenyellow;
+}
+
 .picker {
+  font-size: 40rpx;
   width: 80rpx;
+  display: inline-block;
+}
+
+.parking-name {
+  height: 50rpx;
+  width: 660rpx;
+  font-size: 28rpx;
+  line-height: 50rpx;
+  margin: 40rpx auto 20rpx;
+}
+
+.parking-name-title {
+  font-size: 40rpx;
+  display: inline-block;
+}
+
+.parking-name-picker {
+  font-size: 36rpx;
+  width: 400rpx;
   display: inline-block;
 }
 .parking {
