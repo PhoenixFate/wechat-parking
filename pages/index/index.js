@@ -12,7 +12,7 @@ Page({
     entryIndex:0,
     index:0,
     motto: 'Hello World',
-    modelColor: ["#25ddea","#ccc"],
+    modelColor: ["#f78923","#ccc"],
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
@@ -90,7 +90,7 @@ Page({
 
   parkingModel(){
     this.setData({
-      modelColor: ["#25ddea", "#ccc"],
+      modelColor: ["#f78923", "#ccc"],
       index:0,
       entryIndex:0,
       parkingIndex:0
@@ -100,7 +100,7 @@ Page({
 
   findingModel(){
     this.setData({
-      modelColor: ["#ccc", "#25ddea"],
+      modelColor: ["#ccc", "#f78923"],
       index: 0,
       entryIndex: 0,
       parkingIndex: 0
@@ -265,6 +265,56 @@ Page({
     context.drawImage("../img/car.png", 220, 128, 34, 22);
     context.stroke();
     context.draw();
+  },
+
+  toA(){
+    this.setData({
+      index:0
+    })
+    this.selectA();
+  },
+  toB() {
+    this.setData({
+      index: 1
+    })
+    this.selectB();
+  },
+  toC() {
+    this.setData({
+      index: 2
+    })
+    this.selectC();
+  },
+  toD() {
+    this.setData({
+      index: 3
+    })
+    this.selectD();
+  },
+  toE() {
+    this.setData({
+      index: 4
+    })
+    this.selectE();
+  },
+
+  toA1(){
+    this.setData({
+      entryIndex: 0
+    })
+    this.findA1();
+  },
+  toA2() {
+    this.setData({
+      entryIndex: 1
+    })
+    this.findA2();
+  },
+  toA3() {
+    this.setData({
+      entryIndex: 2
+    })
+    this.findA3();
   }
   
 

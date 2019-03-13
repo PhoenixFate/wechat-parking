@@ -10,7 +10,6 @@ page{
   width: 100%;
   padding: 0 0;
   box-sizing: border-box;
-  background-image: url("http://i1.bvimg.com/655261/65bc62d3afe18bb8.png");
   background-size: 100% 100%;
 } 
 

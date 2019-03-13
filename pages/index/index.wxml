@@ -1,5 +1,7 @@
 <!--index.wxml-->
 <view class="container">
+  <image src='../img/newBase2_small.png' class='my-background-image'>
+  </image>
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" class="get-user" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 用户授权 </button>
     <block wx:else>
@@ -7,8 +9,8 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
       <text class="car-code">{{carCode}}</text>
     </block>
-    <text class='park-model'style="background-color:{{modelColor[0]}}" bindtap="parkingModel">停车模式</text>
-    <text class='find-model'style="background-color:{{modelColor[1]}}" bindtap="findingModel">寻车模式</text>
+    <text class='park-model' style="background-color:{{modelColor[0]}}" bindtap="parkingModel">停车模式</text>
+    <text class='find-model' style="background-color:{{modelColor[1]}}" bindtap="findingModel">寻车模式</text>
   </view>
   <view class='parking-name'>
     <view class='parking-name-title'>选择停车场：</view>
@@ -16,7 +18,7 @@
       {{parkingArray[parkingIndex]}}
     </picker>
   </view>
-  <view class='select' wx:if='{{modelColor[0]=="#25ddea"}}'>
+  <view class='select' wx:if='{{modelColor[0]!="#ccc"}}'>
     <view class='select-title'>选择区域：</view>
     <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class='picker'>
       {{array[index]}}
@@ -25,7 +27,7 @@
       <text>{{emptyNum[index]}} </text> 个空车位
     </view>
   </view>
-  <view class='select' wx:if='{{modelColor[1]=="#25ddea"}}'>
+  <view class='select' wx:if='{{modelColor[1]!="#ccc"}}'>
     <view class='select-title'>选择入口：</view>
     <picker bindchange="changeEntry" value="{{index}}" range="{{arrayEntry}}" class='picker'>
       {{arrayEntry[entryIndex]}}
@@ -34,5 +36,27 @@
   <view class='parking'>
     <canvas class='canvas-parking' canvas-id="firstCanvas"></canvas>
     <image class='img-parking' src="../img/parking.jpg"></image>
+    <view wx:if='{{modelColor[0]!="#ccc"}}'>
+      <view class='a' bindtap='toA'>
+      </view>
+      <view class='b' bindtap='toB'>
+      </view>
+      <view class='c' bindtap='toC'>
+      </view>
+      <view class='d' bindtap='toD'>
+      </view>
+      <view class='e' bindtap='toE'>
+      </view>
+    </view>
+    <view>
+      <view class='a1'>A1</view>
+      <view class='a2'>A2</view>
+      <view class='a3'>A3</view>
+    </view>
+    <view wx:if='{{modelColor[1]!="#ccc"}}'>
+      <view class='a1' bindtap='toA1'>A1</view>
+      <view class='a2' bindtap='toA2'>A2</view>
+      <view class='a3' bindtap='toA3'>A3</view>
+    </view>
   </view>
 </view>
