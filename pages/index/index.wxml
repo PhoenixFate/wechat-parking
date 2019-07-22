@@ -59,4 +59,6 @@
       <view class='a3' bindtap='toA3'>A3</view>
     </view>
   </view>
+
+  <button data-name="shareBtn" open-type="share" bindtap='goTo'>转发</button>
 </view>
